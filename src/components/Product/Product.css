@@ -1,4 +1,4 @@
-.product-container{
-    border-right: 1px solid lightgrey;
+.product{
+    display: flex;
     border-bottom: 1px solid lightgrey;
 }

@@ -11,7 +11,7 @@ const Shop = () => {
             <div className="product-container">
             <h1>Happy Shopping!</h1>
              {
-                products.map(pd=><Product product={pd.name} img={pd.img} price={pd.price}></Product>)
+                products.map(pd=><Product product={pd}></Product>)
                 
              }
            
