@@ -17,8 +17,14 @@ const Cart = (props) => {
     }else if(totalPrice>0){
         Shipping = 12.99;
     }
+    const formattedNumber =(num) =>{
+        const number= num.toFixed(2);
+          return Number(number);
+      }
+    const beforeTax = formattedNumber(totalPrice + Shipping);
+    const tax = formattedNumber((totalPrice /10));
+    const grandCost = formattedNumber((totalPrice + Shipping + tax));
     
-    const beforeTax = totalPrice + Shipping;
     return (
         <div>
             <h2>Order Summery</h2>
@@ -26,8 +32,8 @@ const Cart = (props) => {
                <p>Items: {totalPrice}</p>
                <p>Shipping and Handling:{Shipping}</p>
                <p>Total Before tax:{beforeTax}</p>
-               <p>Estimated tax: </p>
-               <h3>Order Total:{totalPrice} </h3>
+               <p>Estimated tax: {tax} </p>
+               <h3>Order Total:{grandCost} </h3>
                <button className='clickToOrder'><FontAwesomeIcon icon={faBagShopping}/> Review your Order: </button>
         </div>
     );
