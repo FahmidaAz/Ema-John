@@ -16,12 +16,11 @@ const Shop = () => {
             <h1>Happy Shopping!</h1>
              {
                 products.map(pd=><Product handleProduct ={handleProduct} product={pd}></Product>)
-                
              }
            
             </div>
             <div className="cart-container">
-               <h1>Order Summery</h1>
+               <h1>Order Summery:</h1>
             </div>
         </div>
     );
